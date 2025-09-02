@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='vegeclub.xml' b:templateVersion='1.3.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' lang='vi' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='vegeclub.xml' b:templateVersion='1.3.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' lang='en-US' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <b:attr name='xmlns' value=''/>
   <b:attr name='xmlns:b' value=''/>
   <b:attr name='xmlns:expr' value=''/>
@@ -8,19 +8,25 @@
   
   <!--- 
 
-Template Name: vCard
-Version: V2.0
-Distributor   : Pro templates 
-License: Only for testing and practicing purposes. I do not sell any templates. 
-
+Template Name : vCard
+Version       : V2.0
+Distributer   : Protemplates 
+Website       : https://protemplates.org
 
 -->
 &lt;head&gt;
-  <title><data:view.title.escaped/></title>
+  <b:if cond='data:view.isHomepage'><title><data:blog.title/></title><b:else/><title><data:view.title.escaped/> - <data:blog.title/></title></b:if>
     <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
     <b:include name='dns-prefetch'/>
     <b:include name='head-content'/>
-<link href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;display=swap' rel='stylesheet'/>
+  
+  <link href='https://fonts.googleapis.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+  <link as='font' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;display=swap' onload='this.onload=null;this.rel=&apos;stylesheet&apos;' rel='preload'/>
+<noscript>
+  <link href='https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap' rel='stylesheet'/>
+</noscript>
+  
 <b:if cond='data:view.isLayoutMode'><b:template-skin>
 <![CDATA[
 ]]></b:template-skin></b:if>
@@ -147,13 +153,13 @@ a.pswp__share--download:hover{background:#DDD}
 .pswp__caption__center{text-align:left;max-width:420px;margin:0 auto;font-size:13px;padding:10px;line-height:20px;color:#CCC}
 .pswp__caption--empty{display:none}
 .pswp__caption--fake{visibility:hidden}
-.pswp__preloader{width:44px;height:44px;position:absolute;top:0;left:50%;margin-left:-22px;opacity:0;transition:opacity 0.25s ease-out;will-change:opacity;direction:ltr}
+.pswp__preloader{width:44px;height:44px;position:absolute;top:0;left:50%;margin-left:-22px;opacity:0;transition:opacity 0.10s ease-out;will-change:opacity;direction:ltr}
 .pswp__preloader__icn{width:20px;height:20px;margin:12px}
 .pswp__preloader--active{opacity:1}
 .pswp__preloader--active .pswp__preloader__icn{background:url(../images/preloader.gif) 0 0 no-repeat}
 .pswp--css_animation .pswp__preloader--active{opacity:1}
-.pswp--css_animation .pswp__preloader--active .pswp__preloader__icn{animation:clockwise 500ms linear infinite}
-.pswp--css_animation .pswp__preloader--active .pswp__preloader__donut{animation:donut-rotate 1000ms cubic-bezier(0.4,0,0.22,1) infinite}
+.pswp--css_animation .pswp__preloader--active .pswp__preloader__icn{animation:clockwise 100ms linear infinite}
+.pswp--css_animation .pswp__preloader--active .pswp__preloader__donut{animation:donut-rotate 100ms cubic-bezier(0.4,0,0.22,1) infinite}
 .pswp--css_animation .pswp__preloader__icn{background:none;opacity:0.75;width:14px;height:14px;position:absolute;left:15px;top:15px;margin:0}
 .pswp--css_animation .pswp__preloader__cut{position:relative;width:7px;height:14px;overflow:hidden}
 .pswp--css_animation .pswp__preloader__donut{box-sizing:border-box;width:14px;height:14px;border:2px solid #FFF;border-radius:50%;border-left-color:transparent;border-bottom-color:transparent;position:absolute;top:0;left:0;background:none;margin:0}
@@ -174,7 +180,7 @@ a.pswp__share--download:hover{background:#DDD}
 .pswp--minimal--dark .pswp__top-bar{background:none}
 
 @font-face{font-family:'icomoon';src:url('https://cdn.jsdelivr.net/gh/minhkhoi2001/code/vcard/icomoon.woff') format('woff'),url('https://cdn.jsdelivr.net/gh/minhkhoi2001/code/vcard/icomoon.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block}
-[class^="icon-"],[class*=" icon-"]{font-family:'icomoon'!important;speak:never;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+[class^="icon-"],[class*=" icon-"]{font-family:'icomoon'!important;speak:never;font-style:normal;font-weight:normal;font-display:swap;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .icon-send:before{content:"\ea2f"}
 .icon-facebook:before{content:"\e903"}
 .icon-reply:before{content:"\ea2e"}
@@ -931,6 +937,33 @@ a.underlineNone{text-decoration:none}
 0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}
 to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}
 } .credit {opacity:0}
+
+/*Your custom CSS is here*/
+/* Disable Copy */ body{user-select:none;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}/* Enable copy on pre and code tags */ pre, code, .cmCn{user-select:text;-moz-user-select:text;-ms-user-select:text;-khtml-user-select:text;-webkit-user-select:text;-webkit-touch-callout:text}
+
+/* Accordion FAQ Schema*/
+.showH { margin: 1.7em 0; font-size: .93rem; line-height: 1.7em;}
+.showH details.ac{margin:5px 2px;border:0;border-radius:0;}
+.showH details.ac{border-bottom:1px dashed #68686859;}
+details summary { list-style: none; outline: none;}
+details.ac {padding: 18px 15px; background: #fffdfc; box-shadow: 0 5px 35px rgba(0, 0, 0, .07); margin: 20px 0; border-radius: 10px;}
+details.ac:hover {background-color: #68686814;}
+details.ac summary {font-weight: 700; cursor: default; display: flex;align-items: baseline;transition: all .1s ease; cursor: pointer;}
+details.ac summary>h3 { font-size: 0.93rem; margin: 0; padding-top:0!important;}
+details.ac summary::before {content: '\203A'; flex: 0 0 25px; display: flex; align-items: center; justify-content: flex-start; padding: 0 5px; font-weight: 400; font-size: 1.33rem; color: inherit;}
+details.ac[open] summary {  color: #f46013;}
+details.ac[open] summary::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:var(--linkC);opacity:.1;z-index:-1}
+details.ac[open] summary{color:var(--linkC);border-bottom:1px solid var(--contentL)}
+details.ac:not(.alt)[open] summary::before{transform:rotate(90deg);inset-inline-start:-5px;top:2px}  
+details.ac.alt summary::before {content: '\002B'; padding: 0 2px;}
+details.ac summary::before {content: '\203A'; flex: 0 0 25px; display: flex; align-items: center; justify-content: center; padding: 0 10px; font-weight: 400; font-size: 150%; color: inherit; position: relative; inset-inline-start: -5px;}
+details.ac >:not(summary) { padding: calc(var(--szsp) * .8) var(--szsp); margin: 0; opacity: .9;}  
+details.ac >:not(summary){padding:calc(var(--szsp) * .8) var(--szsp);margin:0;opacity:.9}
+details.ac >:not(summary) p{margin: 10px 5px 5px 5px}
+details.ac >:not(summary) >:first-child{margin-top:0}
+details.ac >:not(summary) >:last-child{margin-bottom:0}
+.bX .showH details.ac{box-shadow:none}
+/* Accordion */ 
 ]]></b:skin>
   <b:include name='css-post'/>
 <b:defaultmarkups>
@@ -1057,7 +1090,12 @@ p.comment-footer span:after{content:'\002A';color:#d63031}
 .comment-top{margin:15px 0 0;padding:0 0 15px 0;border-bottom:1px solid rgba(0,0,0,0.03)}
 .post-body{width:100%}
 .separator a{display:block}
-.post-body img{height:auto;max-width:100%}
+.post-body img{height:auto;max-width:100%; margin-top:0; margin-bottom:1rem}
+
+.note{position:relative;padding-block:16px;padding-inline:50px 20px;background:#e8f0fe;line-height:1.6em;border-radius:10px;overflow:hidden;}
+.note::before{content:'';width:60px;height:60px;background:rgba(0,0,0,.2);display:block;border-radius:50%;position:absolute;top:-12px;inset-inline-start:-12px;opacity:.1}
+.note::after{content:'\002A';position:absolute;inset-inline-start:18px;top:16px;min-width:15px;text-align:center}
+
 /* ]]> */</style>
 </b:if>
     </b:includable>
@@ -1100,7 +1138,7 @@ $(document).ready(function() {
     anime({
         targets: 'body',
         opacity: 1,
-        delay: 400,
+        delay: 100,
         complete: function(anim) {
             progressBar(); //Init progress bar
         }
@@ -1120,7 +1158,7 @@ $(document).ready(function() {
         })
         .add({
             targets: '.circle-pulse',
-            duration: 300,
+            duration: 100,
             //delay: 500,
             opacity: 1,
             zIndex: '-1',
@@ -1906,26 +1944,52 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
     <main class='main'>
 	    <!-- Header Image -->
 		<div class='header-image'>
-		    <div class='js-parallax' style='background-image: url(https://1.bp.blogspot.com/-ebkDEgqY7N4/X8qMDnLkVpI/AAAAAAAADZE/47N9vhpbRnI3lqlEATdvaEtSyCyTD_VxQCLcBGAsYHQ/s600/image_header.jpg);'/>
+		    <div class='js-parallax' style='background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinLJW1hV8YgWDW65eFuOoZ71Me-B0L2jK5FI__dspjDfOXcsm7aYtcO2F7W38Gn2ZkrQTgVpB6r6EI4IHx_F8M6tr7TmzMpTRcb0_PhhSx8O0GDdX2_smNVTotDofyM_XQ7hC700TS3hCGgH2hyZ8l6IRRNKq8y5VI6CdvBFixQx2FdDyXThr0c4KhEgk/s1600-rw/header-banner-imamuddinwp.webp);'/>
 		</div>
 		
 	    <div class='container gutter-top'>
-<!-- Header -->
+		    <!-- Header -->
 		    <header class='header box'>
 			    <div class='header__left'>
 				    <div class='header__photo'>
-					    <img alt='seo-expert-in-bd-imam-uddin-imamuddinwp' class='header__photo-img' data-original-height='589' data-original-width='586' height='589' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyxJ4QJifjV_T-5AFmMISTpd5PCefGgYFgsfAZZAkjiGiSTwnz6wuQkypfN44KMz89olHt_0qZZN-FrbFcfO4l2NTDBBwvkoshlvFR5KujBe6gGJ9YKmgY26jT3KYtfZ06obwJPFvw4KAx263H4Aepmp5__QtPJFc2pQr1wdpsqUcoKJcfzZ_wG25JWg/s1600-rw/seo-expert-in-bd-imam-uddin-imamuddinwp.webp' width='586'/>
-					</div><div class='header__base-info'><h4 class='title titl--h4'><a href='https://imamuddinwp.com' target='_blank'>Imam Uddin</a></h4><div class='status'>SEO Expert | Web Designer</div><ul class='header__social'><li><a href='https://www.linkedin.com/in/imamuddinwp/' target='_blank'><i class='font-icon icon-linkedin1'/></a></li><li><a href='https://x.com/imamuddinweb/' target='_blank'><svg fill='currentColor' height='14' viewBox='0 0 14 14' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M11.025.657h2.148l-4.69 5.375L14 13.343H9.68L6.295 8.908l-3.872 4.436H.277l5.017-5.748L0 .657h4.43l3.058 4.054zm-.751 11.401h1.19L3.784 1.877H2.508z'/></svg></a></li><li><a href='https://github.com/imamuddinwp/' target='_blank'><i class='font-icon icon-github1'/></a></li><li><a href='https://www.facebook.com/imamuddinwpbd' target='_blank'><i class='font-icon icon-facebook1'/></a></li></ul></div></div><div class='header__right'><ul class='header__contact'><li><span class='overhead'>Email: </span><a href='mailto:imamcu07@gmail.com' target='_blank'>imamcu07@gmail.com</a></li><li><span class='overhead'>Phone:</span><a href='tel:+8801815682307' target='_blank'>+880 1815 682307</a></li></ul>
-<ul class='header__contact'><li><span class='overhead'>DOB:</span>01st January, 1988</li><li><span class='overhead'>Location:</span><a href='https://g.page/imam-uddin-imamuddinwp?share' target='_blank'>Chittagong, Bangladesh</a></li></ul></div>
+					    <a href='/'><img alt='Imamuddinwp SEO Expert Shopify Expert' class='header__photo-img' fetchpriority='high' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNsZuQ1bZfjFtbyiGJIc37HSKLekGL4_jFxOI8z7Xt0eX6lrNZxVhNU_DJ-mFQCAZwuk6MIpZ6O0E_0cB_U5p7mg4L9O6LWDX3N738fUSpJ2yAxX5RPcYKWpMkO9Pi_8h3QDUD61DIyi-wdctM2PQianLPX_zd39e54xjRkzsZpO2Sq_ysEMfblIEsBRM/s1600-rw/imamuddinwp.webp' title='imamuddinwp'/></a>
+					</div>
+					<div class='header__base-info'>
+                      <h2 class='title title--h2'><a href='/'>Imam Uddin</a></h2>
+						<div class='status'>SEO Expert | Shopify Expert</div><hr/>
+						<ul class='header__social'>
+						    <li><a aria-label='GithubProfile' href='https://github.com/imamuddinwp/' target='_blank'><i class='font-icon icon-github1'/></a></li>
+                            <li><a aria-label='LinkedInProfile' href='https://www.linkedin.com/in/imamuddinwp/' target='_blank'><i class='font-icon icon-linkedin1'/></a></li>
+                           <li><a aria-label='TwitterProfile' href='https://x.com/imamuddinweb/' target='_blank'><svg fill='currentColor' height='14' viewBox='0 0 14 14' width='14' xmlns='http://www.w3.org/2000/svg'><path d='M11.025.657h2.148l-4.69 5.375L14 13.343H9.68L6.295 8.908l-3.872 4.436H.277l5.017-5.748L0 .657h4.43l3.058 4.054zm-.751 11.401h1.19L3.784 1.877H2.508z'/></svg></a></li>
+                            <li><a aria-label='FacebookProfile' href='https://www.facebook.com/imamuddinwp/'><i class='font-icon icon-facebook1'/></a></li>
+						    							
+						</ul>
+					</div>
+				</div>
+              
+				<div class='header__right'>
+				    <ul class='header__contact'>
+					    <li><span class='overhead'>Email: </span><a href='mailto:imamuddinwp@gmail.com' target='_blank'>imamuddinwp@gmail.com</a></li>
+						<li><span class='overhead'>Mobile: </span><a href='tel:+8801815682307' target='_blank'>+880 1815 682307</a></li>
+					</ul>
+                  <ul class='header__contact'>
+					    <li><span class='overhead'>DOB: </span>13th Aug, 1988</li>
+						<li><span class='overhead'>Address: </span><a href='https://g.page/imam-uddin-imamuddinwp?share' target='_blank'>Dhaka, Bangladesh</a></li>
+					</ul>
+				</div>
 			</header>
 			
 		    <div class='row sticky-parent'>
 			    <!-- Sidebar nav -->
                 <aside class='col-12 col-md-12 col-lg-2'>
 				    <div class='sidebar box sticky-column'>
-	                    <ul class='nav'><li class='nav__item'><a class='' href='https://imamuddinwp.com/'>
-<i class='icon-user'/>About</a></li><li class='nav__item'><a class='active' href='https://imamuddinwp.com/p/resume-of-imam-uddin.html'><i class='icon-file-text'/>Resume</a></li><li class='nav__item'><a href='https://imamuddinwp.blogspot.com/p/portfolio.html'><i class='icon-codesandbox'/>Portfolio</a></li><li class='nav__item'><a href='https://imamuddinwp.blogspot.com/search'>
-<i class='icon-book-open'/>Blog</a></li><li class='nav__item'><a href='https://imamuddinwp.com/p/contact.html'><i class='icon-map-pin'/>Contact</a></li></ul>
+	                    <ul class='nav'>
+                            <li class='nav__item'><a href='/'><b:class cond='data:view.isHomepage' name='active'/><i class='icon-user'/>About</a></li>
+							<li class='nav__item'><a href='/p/resume.html'><i class='icon-briefcase'/>Resume</a></li>
+                            <li class='nav__item'><a href='/p/works.html'><i class='icon-tool'/>Works</a></li>
+                            <li class='nav__item'><a href='/search'><b:class cond='data:view.isPost' name='active'/><i class='icon-feather'/>Blog</a></li>
+                            <li class='nav__item'><a href='/p/contact.html'><i class='icon-zap'/>Contact</a></li>
+                        </ul>
 					</div>
 		        </aside>
 		        
@@ -1934,134 +1998,195 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
 <b:if cond='data:view.isHomepage'>
   <div class='box box-content'>
 <div class='pb-0 pb-sm-2'>
-<h1 class='title title--h1 first-title title__separate'>About Me</h1>
-<h2 class='title title--h3'>Who <span>Am I?</span></h2>
-<p>Hey there; it&#8217;s me! 🤠 <a href='https://imamuddinwp.com/' rel='noopener' target='_blank'><strong> Imam Uddin</strong></a>, <a href='https://sites.google.com/view/imamuddinwp/' rel='noopener' target='_blank'><em>imamuddinwp</em></a>; A passionate Front-End Web Developer &amp; SEO Expert; Founder of <b><i>Alhamdulillah Tech</i></b>.</p>
-<p>I have professional experience in E-commerce Store Design on <a href='https://www.behance.net/imamuddinwp' rel='noopener' target='_blank'><strong>Shopify</strong></a>, <a href='https://imamuddinwp.wixsite.com/imamuddin' rel='noopener' target='_blank'><strong>WiX</strong></a>, and <a href='https://wordpress.org/' rel='noopener' target='_blank'><strong>WordPress</strong></a> platforms. I&#8217;m very much enthusiastic about <a href='https://blog.hubspot.com/marketing/seo-strategy' rel='noopener' target='_blank'><strong>SEO</strong></a>, <strong><a href='https://www.forbes.com/sites/forbesagencycouncil/2020/05/01/the-importance-of-technical-optimization-for-seo/?sh=5f5a8fd3d3eb' rel='noopener' target='_blank'>Technical SEO</a></strong>, and <a href='https://www.brightlocal.com/learn/local-seo-complete-guide/' rel='noopener' target='_blank'><strong>Local SEO</strong></a>.</p>
-<p>Need to know more about me? Just go to Google and simply search by typing &#8216;<a href='https://www.google.com/search?q=imam+uddin+imamuddinwp' rel='noopener' target='_blank'><strong>imamuddinwp</strong></a>&#8216; 🕵 in the search box, and you will definitely see my online activities! 🙂.</p>
+  <h1 class='title title--h1 first-title title__separate'>Imamuddinwp - [SEO Expert | Web Designer]</h1>
+  <p>Welcome to my digital space! I&#8217;m <b><a href='/' target='_blank'>Imam Uddin</a></b>, a highly passionate <b>SEO Expert</b> &amp; <b>Creative Web Designer</b>. I blend creativity and data-driven strategy to build websites that not only look stunning, but also climb search-engine rankings and convert visitors into customers.</p>
+  <blockquote>My journey in SEO and Web Design began over 12 years ago, fueled by curiosity and a love for technology.</blockquote>
+    <h2 class='title title--h2 first-title title__separate'>Who Am I? - [Imam Uddin - imamuddinwp]</h2>
+  
+  <p>You may already know me as <b><a href='https://www.bing.com/search?q=imamuddinwp' target='_blank'>@imamuddinwp</a></b> &#8212; that&#8217;s the name I&#8217;m known by across the web. Just type <b><a href='/p/about-me.html' target='_blank'>imamuddinwp</a></b> on any popular search engine, and you&#8217;ll discover my digital footprints, contributions, and active involvement in the online world of SEO, Web Development, and Digital Marketing.</p>
+    <p>Over the past decade, I&#8217;ve merged the art of design with the science of <b>SEO</b> to deliver online experiences that captivate audiences and drive real business growth. If you Google <b><a href='https://www.google.com/search?q=imamuddinwp' target='_blank'>imamuddinwp</a></b>, you&#8217;ll get a glimpse into my projects, blog posts, and community contributions. I&#39;m also the founder of <b><i><a href='https://nextgendigitalhub.blogspot.com/p/about-us.html' target='_blank'>NextGen Digital Hub</a></i></b>.</p>  
 </div>
-
+<hr/>
 <!-- What -->
 <div class='mt-1'>
-    <h2 class='title title--h3'>What I&#39;m Doing?</h2>
-  <div class='row'><div class='col-12 col-lg-6'><div class='case-item'>
-<img alt='SEO-expert-imamuddinwp' border='0' class='case-item__icon' data-original-height='40' data-original-width='40' height='40' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPn73-NAT1N7GfyqkzZTYthyZEqz8LzyvXaZo3oh82N4uJiG0Gzjo-sqaTd60GJ3yvf5odgIeUjURbsuHR3nYpaSyg0BM-NIqzsQP2HCYVkESe2dRoyIGlTkgteBg8FIcXp0R4o2m_vfrumP3CCIN29-M24lvW4j6wS1kP3q_rUf2WaeiEbryCtSROZQ/s1600-rw/icon-design.webp' width='40'/>
-<div>
-<h3 class='title title--h4'>Responsive Web Design</h3>
-<p class='case-item__caption'><b><a href='https://www.forbes.com/sites/brianrashid/2017/06/13/5-essential-reasons-and-benefits-why-you-should-be-using-a-responsive-website-design-now/' rel='noopener noreferrer' target='_blank'>Responsive Web Design</a></b> will make your site <b><a href='https://developers.google.com/search/mobile-sites/get-started' rel='noopener noreferrer' target='_blank'> Mobile-Friendly</a></b>, improve the way it looks on devices (large/small screens like desktop, laptop, tab, smartphones etc).</p>
-</div>
-</div>
-</div>
-<div class='col-12 col-lg-6'>
-<div class='case-item'>
-<img alt='Web-Design-Imam-Uddin-imamuddinwp' border='0' class='case-item__icon' data-original-height='40' data-original-width='40' height='40' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIA4QFOUpI4lP4COnIkmTGaMoFDP_vkTJiYWDzKmxqQXntoy567-pQgx2VU9wZx4ff0hl-aOEhLG_3Bbru1fs9mxCb-tERJr41agCyevocBJdupBs9419zFcotT_7okNPUoAu-3E7B4N609d5e2LsblYzLAYgFYSnn74iedQvCO6bWsejXGFwOO4kShw/s1600-rw/icon-dev.webp' width='40'/>
-<div>
-<h3 class='title title--h4'>Coding &amp; Web Development</h3>
-<p class='case-item__caption'>From beginning, I have started learning basic <b>HTML5</b>, <b>CSS3</b>, <b>Bootstrap</b>, <b>jQuery</b> especially <b><a href='https://www.udemy.com/courses/development/web-development/' target='_blank'>Web Development</a></b>. Check my codes on <b><a href='GitHub' target='_blank'>GitHub</a></b>, freeCodeCamp, <b><a href='https://codepen.io/imamuddinwp' target='_blank'>Codepen</a></b> , <b><a href='https://www.sololearn.com/profile/13136177' target='_blank'>SOLOLEARN</a></b> .</p>
-</div>
-</div>
-</div>
-<div class='col-12 col-lg-6'>
-<div class='case-item'>
-<img alt='shopify-expert-in-bangladesh-imamuddinwp' border='0' class='case-item__icon' data-original-height='40' data-original-width='40' height='40' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbL8K0mX4LAz_bhHUcvgkW2fC_tKBHyeuPAsj1ttwG5J1tF2vpJ0nmc8yE7ugPutuSvLPtmNVG-doDetS7Bf5j-tO7xJsSxkjqmqbv_EzFJZ4Jo5ZiCR8dR74voQLvZgFr-QiUF9w_JWgAB095blRvCdWj1wnHcUcd4j_gAyUkBfxk_lIQgkRzruFMXg/s1600-rw/shopify-expert-in-bangladesh.webp' width='40'/>
-<div>
-<h3 class='title title--h4'>Shopify Store Design</h3>
-<p class='case-item__caption'>Freelance online services for the <strong><a href='https://behance.net/imamuddinwp' target='_blank' title='Shopify Store Design of Imam Uddin; imamuddinwp'>Best Shopify Store Design</a></strong>. Outsource your <strong><a href='https://www.shopify.com/' target='_blank' title='Shopify Store Design; imamuddinwp'>Shopify Store Design</a></strong> project and get it quickly done and delivered remotely online.</p>
-</div>
-</div>
-</div>
-<div class='col-12 col-lg-6'>
-<div class='case-item'>
-<img alt='seo-expert-in-bd-imamuddinwp' border='0' class='case-item__icon' data-original-height='42' data-original-width='40' height='42' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_Uqw2N58UBMurInJP-LBYkN-P3zNzgO-odObVC_MxOdg7HCXthtdQB0ODlA-v26_76SpccgkWg6pbc8-KXG7nKjj56rY7ceFuBL9Y0N9F18utfFR8l59qal1g4FWSu7fhzrx5dxFE1uffSTzytLDkrIVqpzjQIU3Mof4QPCIIqB--0rLyIe8ao_MIxg/s1600-rw/woocommerce-wordpress-imamuddinwp.webp' width='40'/>
-<div>
-<h3 class='title title--h4'>WordPress &amp; WooCommerce Solution</h3>
-<p class='case-item__caption'>I have a good knowledge on <b><a href='https://woocommerce.com/posts/introduction-to-wordpress-and-woocommerce/' target='_blank'>WordPress &amp; WooCommerce</a></b> Solution. I have also professional skill on <b><a href='https://elementor.com/pro/' target='_blank'>Elementor Pro</a></b> along with all popular WordPress Page Buider &amp; Plugings. </p>
-</div>
-</div>
-</div>
-<div class='col-12 col-lg-6'>
-<div class='case-item'>
-<img alt='woocommerce-wordpress-imamuddinwp' border='0' class='case-item__icon' data-original-height='42' data-original-width='40' height='40' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4-VaSiLeGQgPsRgCwYgANwN8o_-T9WuW4Son4tu2bjqt8OTq6TVn24PaRZzRMh3FvnjNL6e2f5HXPaZsmdG7mVbUaxsc-EfmiLTOXdJXuFP7aKPtzPK79ZkOoK8A7U5sHH9GKF2dEty2CfTtzTD8olA5YWkpLIvUNRhXpfQTfT-Tk8-ocXqCMuJYjEw/s1600-rw/seo-expert-in-bd-imamuddinwp.webp' width='40'/>
-<div>
-<h3 class='title title--h4'>Search Engine Optimization - SEO</h3>
-<p class='case-item__caption'>I&#39;m very much enthusiastic about <b><a href='https://searchengineland.com/guide/what-is-seo' target='_blank'>SEO - Search Engine Optimization</a></b> especially On-Page SEO, Off-Page SEO, <b><a href='https://backlinko.com/local-seo-guide' target='_blank'>Local SEO</a></b> , <b><a href='https://technicalseo.com/' target='_blank'>Tachnical SEO</a></b> and all types <b><a href='https://neilpatel.com/blog/improve-google-rankings-without-getting-penalized/' target='_blank'>Google Ranking</a></b> related tasks. </p>
-</div>
-</div>
-</div>
-<div class='col-12 col-lg-6'>
-<div class='case-item'>
-<img alt='seo-expert-in-bd-imamuddinwp' border='0' class='case-item__icon' data-original-height='42' data-original-width='40' height='42' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCM4TjrA8YWYCeI1tmcuUT2BALg6d4NZ-RVyDo79tOxfdJkmONQPJSNV0nKkVJjv_mHa-j9OLfASWJ9RQqjDf0s3bBN5NJ9cx3EtbiRNRhFNH2vsUhpRkK-2Tsua-yUkQ9D8wEWt6BvM0Irw1vpIgSsp2U67mvnvD2V3ZErrEx_sGKuTiNqxMmm-q2Vw/s1600-rw/content-writing-blogging-imamuddinwp.webp' width='40'/>
-<div>
-<h3 class='title title--h4'>Content Writing &amp; Blogging</h3>
-<p class='case-item__caption'>For the last 5 years more, I&#39;m working with blogging and <b><a href='https://www.semrush.com/blog/content-writing-how-to-write-and-order-different-types-of-content/' target='_blank'>Content Writing</a></b> on multi-topics especially on tech and <b><a href='https://en.wikipedia.org/wiki/Information_technology/' target='_blank'>IT</a></b> related issues, problems and solutions.</p>
-</div>
-</div>
-</div>
-</div>
+      <h3 class='title title--h3 title__separate'>What I&#39;m Doing?</h3>
+  <p>I&#8217;m a passionate and performance-driven <b>SEO Specialist</b> and <b>Professional Web Designer</b> who combines data with design to bring brands to life online. My journey began with a curiosity for how websites rank, function, and engage users &#8212; which naturally led me into the dynamic worlds of SEO, UI/UX, and eCommerce.</p>
+  <p>Here are the core services I offer to help brands, individuals, and businesses achieve digital success:</p>
+  <ul><li>Responsive Web Design</li><li>Coding &amp; Web Development</li><li>Shopify Store Design</li><li>WordPress &amp; WooCommerce Solution</li><li><a href='https://www.wordstream.com/seo'>Search Engine Optimization - SEO</a></li><li>Content Writing &amp; Blogging</li></ul>
+  <p>For years, I&#8217;ve been helping businesses, entrepreneurs, and brands grow organically, rank higher, and build professional, high-converting websites that perform. With a perfect blend of <a href='https://en.wikipedia.org/wiki/Search_engine_optimization' target='_blank'>SEO mastery</a> and creative web design, I turn ideas into measurable success.</p>
+  <div class='row'>
+    <div class='col-12 col-lg-6'>
+      <div class='case-item'>
+        <img alt='SEO-expert-imamuddinwp' border='0' class='case-item__icon' data-original-height='40' data-original-width='40' height='40' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPn73-NAT1N7GfyqkzZTYthyZEqz8LzyvXaZo3oh82N4uJiG0Gzjo-sqaTd60GJ3yvf5odgIeUjURbsuHR3nYpaSyg0BM-NIqzsQP2HCYVkESe2dRoyIGlTkgteBg8FIcXp0R4o2m_vfrumP3CCIN29-M24lvW4j6wS1kP3q_rUf2WaeiEbryCtSROZQ/s1600-rw/icon-design.webp' width='40'/>
+        <div>
+          <h4 class='title title--h4'>Responsive Web Design</h4>
+          <p class='case-item__caption'>In today&#8217;s mobile-first world, a website must look and perform beautifully on every screen. I create pixel-perfect, <a href='https://www.w3schools.com/html/html_responsive.asp' target='_blank'>responsive web designs</a> that adapt smoothly to any device&#8212;ensuring your visitors get the best experience, whether they&#8217;re on a desktop, tablet, or smartphone.</p>
+        </div>
+      </div>
+    </div>
+    <div class='col-12 col-lg-6'>
+      <div class='case-item'>
+        <img alt='Web-Design-Imam-Uddin-imamuddinwp' border='0' class='case-item__icon' data-original-height='40' data-original-width='40' height='40' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIA4QFOUpI4lP4COnIkmTGaMoFDP_vkTJiYWDzKmxqQXntoy567-pQgx2VU9wZx4ff0hl-aOEhLG_3Bbru1fs9mxCb-tERJr41agCyevocBJdupBs9419zFcotT_7okNPUoAu-3E7B4N609d5e2LsblYzLAYgFYSnn74iedQvCO6bWsejXGFwOO4kShw/s1600-rw/icon-dev.webp' width='40'/>
+        <div>
+          <h4 class='title title--h4'>Coding &amp; Web Development</h4>
+          <p class='case-item__caption'>I don&#8217;t just drag and drop&#8212;I code with purpose. From clean HTML/CSS to custom JavaScript and PHP functionalities, I build websites that are not only visually stunning but also robust under the hood. Whether you need a custom-built feature or a fully dynamic site, I bring your <a href='https://www.shopify.com/blog/online-business-ideas' target='_blank'>digital ideas</a> to life with reliable code that performs.</p>
+        </div>
+      </div>
+    </div>
+    <div class='col-12 col-lg-6'>
+      <div class='case-item'>
+        <img alt='shopify-expert-in-bangladesh-imamuddinwp' border='0' class='case-item__icon' data-original-height='40' data-original-width='40' height='40' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbL8K0mX4LAz_bhHUcvgkW2fC_tKBHyeuPAsj1ttwG5J1tF2vpJ0nmc8yE7ugPutuSvLPtmNVG-doDetS7Bf5j-tO7xJsSxkjqmqbv_EzFJZ4Jo5ZiCR8dR74voQLvZgFr-QiUF9w_JWgAB095blRvCdWj1wnHcUcd4j_gAyUkBfxk_lIQgkRzruFMXg/s1600-rw/shopify-expert-in-bangladesh.webp' width='40'/>
+        <div>
+          <h4 class='title title--h4'>Shopify Store Design</h4>
+          <p class='case-item__caption'>Looking to launch or revamp your <a href='https://www.shopify.com/online' target='_blank'>Shopify store</a>? I create beautiful, high-converting Shopify designs tailored to your brand. From homepage to checkout, I optimize every step of your customer&#8217;s journey for sales. Clean, user-friendly layouts with conversion in mind&#8212;that&#8217;s how I help your products sell more.</p>
+        </div>
+      </div>
+    </div>
+    <div class='col-12 col-lg-6'>
+      <div class='case-item'>
+        <img alt='seo-expert-in-bd-imamuddinwp' border='0' class='case-item__icon' data-original-height='42' data-original-width='40' height='42' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_Uqw2N58UBMurInJP-LBYkN-P3zNzgO-odObVC_MxOdg7HCXthtdQB0ODlA-v26_76SpccgkWg6pbc8-KXG7nKjj56rY7ceFuBL9Y0N9F18utfFR8l59qal1g4FWSu7fhzrx5dxFE1uffSTzytLDkrIVqpzjQIU3Mof4QPCIIqB--0rLyIe8ao_MIxg/s1600-rw/woocommerce-wordpress-imamuddinwp.webp' width='40'/>
+        <div>
+          <h4 class='title title--h4'>WordPress &amp; WooCommerce Solution</h4>
+          <p class='case-item__caption'>I build WordPress websites that are easy to manage and scale. Whether it&#8217;s a blog, business site, or eCommerce store using WooCommerce, I customize it to match your goals. I specialize in custom themes, plugins, optimization, and everything in between&#8212;empowering you with a powerful and user-friendly <a href='https://www.wpbeginner.com/showcase/best-cms-platforms-compared/' target='_blank'>CMS</a>.</p>
+        </div>
+      </div>
+    </div>
+    <div class='col-12 col-lg-6'>
+      <div class='case-item'>
+        <img alt='woocommerce-wordpress-imamuddinwp' border='0' class='case-item__icon' data-original-height='42' data-original-width='40' height='40' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4-VaSiLeGQgPsRgCwYgANwN8o_-T9WuW4Son4tu2bjqt8OTq6TVn24PaRZzRMh3FvnjNL6e2f5HXPaZsmdG7mVbUaxsc-EfmiLTOXdJXuFP7aKPtzPK79ZkOoK8A7U5sHH9GKF2dEty2CfTtzTD8olA5YWkpLIvUNRhXpfQTfT-Tk8-ocXqCMuJYjEw/s1600-rw/seo-expert-in-bd-imamuddinwp.webp' width='40'/>
+        <div>
+          <h4 class='title title--h4'>Search Engine Optimization - SEO</h4>
+          <p class='case-item__caption'>I don&#8217;t just build websites&#8212;I make sure they get found. With deep <b>SEO expertise</b>, I optimize websites for Google and other <a href='https://www.searchenginejournal.com/seo/meet-search-engines/' target='_blank'>major search engines</a> to boost your visibility, drive organic traffic, and improve rankings through on-page, off-page, and <a href='https://developers.google.com/search/docs/fundamentals/get-started' target='_blank'>Technical SEO strategies</a>.</p>
+        </div>
+      </div>
+    </div>
+    <div class='col-12 col-lg-6'>
+      <div class='case-item'>
+        <img alt='seo-expert-in-bd-imamuddinwp' border='0' class='case-item__icon' data-original-height='42' data-original-width='40' height='42' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNPcno4Rjx4SOET825dkblqnsKtEVynyscG2hLCVr17q9KH7nWBONNk5luSWrts0R08OTflj4F2pV_6N9v3iB_Opb5qW18rJs6WWKbCUAhP5ytGU19cXZs1eDmL0VhV-khhWpe_Fk4NpVYfjINFajVHZKLkUiBbiOP5okECguwBwhBknOSvugntBJYV7Q/s1600-rw/imamuddinwp.webp' width='40'/>
+        <div>
+          <h4 class='title title--h4'>Content Writing &amp; Blogging</h4>
+          <p class='case-item__caption'>Great content turns visitors into customers. I craft compelling blog posts, website content, product descriptions, and <b><a href='https://www.semrush.com/blog/seo-writing/' target='_blank'>SEO-optimized articles</a></b> that not only engage but also convert. Whether it&#39;s storytelling or strategic copy, your message will be clear, crisp, and effective.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <div class='mt-2'>
-<h2 class='title title--h3'>Testimonials</h2>
-<p>Here I will mention some testimonials from some of my happy clients. Let&#39;s see they say about &#39; <b><a href='/web/20220904062754/https://imamuddinwp.blogspot.com/' target='_blank'>imamuddinwp</a></b> &#39;.</p>
-<div class='swiper-container js-carousel-review swiper-container-initialized swiper-container-horizontal' style='cursor: grab;'>
-<div class='swiper-wrapper' style='transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);'>
-<div class='swiper-slide review-item swiper-slide-active' style='width: 450px; margin-right: 30px;'>
-<svg class='avatar avatar--80' viewBox='0 0 84 84'>
-<g class='avatar__hexagon'>
-<image alt='khalid-farhan-digital-marketer-imamuddinwp' height='100%' width='100%' xlink:href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJcjm7hZtvZJfx9UzTZzD4i0Fd8sEk9Fn_AEV1OINDtss5owksa9X_xcBWfEbt6N8uKyi57y7yOLbK2HYkbmjabs8FRTRiFztFrrBP0sXkxutGy4eV886C2SWXlHbrU5lgH_0mqURvkbOlDrT02TGtZrjsFUtm9x74mD06mCXSYD-_jwQooWKnbU_AVA/s1600-rw/khalid-farhan-digital-marketer-imamuddinwp.webp'/>
-</g>
-</svg>
-<div class='review-item__textbox'>
-<h4 class='title title--h5'><a href='https://khalidfarhan.com/' target='_blank'>Khalid Farhan</a></h4>
-<small>Digital Marketer</small>
-<p class='review-item__caption'>I wanted to first thank you for the amazing work you did with us. This was brilliant and we truly appreciate it. We learned a lot from you and I hope you learned something as well.</p>
 </div>
+<hr/>
+<!-- Testimonials -->
+<div class='mt-2'>
+  <h3 class='title title--h3 title__separate'>Success Backed by Client Words!</h3>
+  <p>I strongly believe that my <b>Happy Clients</b>&#39; voices speak louder than anything I could say. Read real stories and testimonials from satisfied customers who&#8217;ve experienced my services first-hand. Their feedback drives me forward and reflects the trust I strive to build every day. </p>
+  <div class='swiper-container js-carousel-review swiper-container-initialized swiper-container-horizontal' style='cursor: grab;'>
+    <div class='swiper-wrapper' style='transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);'>
+      <div class='swiper-slide review-item' style='width: 450px; margin-right: 30px;'>
+        <svg class='avatar avatar--80' viewBox='0 0 84 84'>
+          <g class='avatar__hexagon'>
+            <image alt='tamalika-banarjee-imamuddinwp' height='100%' loading='lazy' width='100%' xlink:href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbdYIdRI-pmSQw-TK-73UA-ptDflUj_hMEI9cIPNZ0g-C1ZPrn66eZhIjsd5GsUgslCExq5QifRL8__ofZlD-GWvpfCZasYUfVgh9kGJEiQTLOcdZK5r4A7pP7wCtjRd0_Br87OUgLyQ6_nUkVbjfLbHaSf-L-VmTvTxKL24yCsoiIh7m6bhpKbZwaZG8/s1600-rw/tamalika-banarjee-imamuddinwp.webp'/>
+          </g>
+        </svg>
+        <div class='review-item__textbox'>
+          <h4 class='title title--h4'>Tamalika Banerjee</h4>
+          <small>Business Entrepreneur</small>
+          <p class='review-item__caption'>I had the pleasure of receiving <b>Google AdSense</b> services from <b>Imam Uddin</b> (<strong><a href='https://www.sololearn.com/en/profile/13136177' target='_blank'><i>imamuddinwp</i></a></strong>). His deep expertise in AdSense and strong grasp of <b><a href='https://backlinko.com/google-ranking-factors' target='_blank'>Google ranking strategies</a></b> truly stand out. It&#8217;s been a proud experience working with him&#8212;he&#8217;s not only highly skilled but also honest, professional, and incredibly friendly throughout the process.</p>
+        </div>
+      </div>
+      <div class='swiper-slide review-item swiper-slide-active' style='width: 450px; margin-right: 30px;'>
+        <svg class='avatar avatar--80' viewBox='0 0 84 84'>
+          <g class='avatar__hexagon'>
+            <image alt='khalid-farhan-digital-marketer-imamuddinwp' height='100%' loading='lazy' width='100%' xlink:href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJcjm7hZtvZJfx9UzTZzD4i0Fd8sEk9Fn_AEV1OINDtss5owksa9X_xcBWfEbt6N8uKyi57y7yOLbK2HYkbmjabs8FRTRiFztFrrBP0sXkxutGy4eV886C2SWXlHbrU5lgH_0mqURvkbOlDrT02TGtZrjsFUtm9x74mD06mCXSYD-_jwQooWKnbU_AVA/s1600-rw/khalid-farhan-digital-marketer-imamuddinwp.webp'/>
+          </g>
+        </svg>
+        <div class='review-item__textbox'>
+          <h4 class='title title--h4'>
+            <a href='https://khalidfarhan.com/' target='_blank'>Khalid Farhan</a>
+          </h4>
+          <small>Digital Marketer</small>
+          <p class='review-item__caption'>I want to begin by sincerely thanking you for the incredible work you&#8217;ve done with us. Your contribution was outstanding, and we truly appreciate it. We gained so much from the experience and learned a great deal from you&#8212;I hope it was just as valuable for you as it was for us.</p>
+        </div>
+      </div>
+      <div class='swiper-slide review-item swiper-slide-next' style='width: 450px; margin-right: 30px;'>
+        <svg class='avatar avatar--80' viewBox='0 0 84 84'>
+          <g class='avatar__hexagon'>
+            <image alt='Shibu-Kalayil-imamuddinwp' height='100%' loading='lazy' width='100%' xlink:href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHsE9PR3ZZ5lNzuWrZKNs81ukxKFG8FjsqpULsJ6cdft2ivI01uGCzFt4T3MIgRQSOeJuHHfoegijA8-TjOJp6cwoMHBdCEnd0dwCqzN5c523xAwujEP8eFYJczwXkiaSH7kKobYnQcq39y_daYEsiklmROWdPxjjARK5XSAnHcSVk_LIdFfeIItR6HQ/s1600-rw/Shibu-Kalayil-imamuddinwp.webp'/>
+          </g>
+        </svg>
+        <div class='review-item__textbox'>
+          <h4 class='title title--h4'>Shibu Kalayil</h4>
+          <small>Shopify Store Owner</small>
+          <p class='review-item__caption'>Your expertise in <a href='https://www.shopify.com/website/design' target='_blank'>Shopify Store Design</a> is truly impressive&#8212;you&#39;re clearly a seasoned Shopify expert. Keep up the great work! I have big plans for a <b>Shopify store</b>, and I&#8217;ll definitely reach out to you again in the future when it&#8217;s time to move forward with the design.</p>
+        </div>
+      </div>
+      <div class='swiper-slide review-item' style='width: 450px; margin-right: 30px;'>
+        <svg class='avatar avatar--80' viewBox='0 0 84 84'>
+          <g class='avatar__hexagon'>
+            <image alt='gias-uddin-ntv-imamuddinwp' height='100%' loading='lazy' width='100%' xlink:href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKkoTVeLdAZFWuvMqVuGGnIpS2YmQ-1Tt0R-NkO5KASdJdfeajz6PbUUBUkgtuNywI9JexjgT1mOOdgRhVTOMUq9S4pWxAsYxOiMgEJ6GtxJqee2hjhlNtVSBSE7L-034mHHaNdCoVhFZBq60XfotTtD5drir5BL4cdlndGpVVjZTiFWwwhrehq5Bglg/s1600-rw/gias-uddin-ntv-imamuddinwp.webp'/>
+          </g>
+        </svg>
+        <div class='review-item__textbox'>
+          <h4 class='title title--h4'>Gias Uddin</h4>
+          <small>Journalist, Editor </small>
+          <p class='review-item__caption'>I would like to extend a heartfelt thank you to <b>Imam Uddin</b>, also known as <b><a href='https://sites.google.com/view/imamuddinwp/' target='_blank'>imamuddinwp</a></b>. He has been an integral part of bringing my dream project&#8212;<b>BBCNUK</b>, a UK-based Bangla news portal&#8212;to life.</p>
+        </div>
+      </div>
+    </div>
+    <div class='swiper-pagination swiper-pagination-clickable swiper-pagination-bullets'>
+      <span aria-label='Go to slide 1' class='swiper-pagination-bullet swiper-pagination-bullet-active' role='button' tabindex='0'/>
+      <span aria-label='Go to slide 2' class='swiper-pagination-bullet' role='button' tabindex='0'/>
+      <span aria-label='Go to slide 3' class='swiper-pagination-bullet' role='button' tabindex='0'/>
+    </div>
+    <span aria-atomic='true' aria-live='assertive' class='swiper-notification'/>
+  </div>
 </div>
-<div class='swiper-slide review-item swiper-slide-next' style='width: 450px; margin-right: 30px;'>
-<svg class='avatar avatar--80' viewBox='0 0 84 84'>
-<g class='avatar__hexagon'>
-<image alt='Shibu-Kalayil-imamuddinwp' height='100%' width='100%' xlink:href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHsE9PR3ZZ5lNzuWrZKNs81ukxKFG8FjsqpULsJ6cdft2ivI01uGCzFt4T3MIgRQSOeJuHHfoegijA8-TjOJp6cwoMHBdCEnd0dwCqzN5c523xAwujEP8eFYJczwXkiaSH7kKobYnQcq39y_daYEsiklmROWdPxjjARK5XSAnHcSVk_LIdFfeIItR6HQ/s1600-rw/Shibu-Kalayil-imamuddinwp.webp'/>
-</g>
-</svg>
-<div class='review-item__textbox'>
-<h4 class='title title--h5'>Shibu Kalayil</h4>
-<small>Shopify Store Owner</small>
-<p class='review-item__caption'>Your knowledge of Shopify is very intellectual. You are really a Shopify Expert.  Keep it up! I have a big plan of Shopify Store. So in future I will knock you again for my Shopify Store Design.</p>
-</div>
-</div>
-<div class='swiper-slide review-item' style='width: 450px; margin-right: 30px;'>
-<svg class='avatar avatar--80' viewBox='0 0 84 84'>
-<g class='avatar__hexagon'>
-<image alt='gias-uddin-ntv-imamuddinwp' height='100%' width='100%' xlink:href='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKkoTVeLdAZFWuvMqVuGGnIpS2YmQ-1Tt0R-NkO5KASdJdfeajz6PbUUBUkgtuNywI9JexjgT1mOOdgRhVTOMUq9S4pWxAsYxOiMgEJ6GtxJqee2hjhlNtVSBSE7L-034mHHaNdCoVhFZBq60XfotTtD5drir5BL4cdlndGpVVjZTiFWwwhrehq5Bglg/s1600-rw/gias-uddin-ntv-imamuddinwp.webp'/>
-</g>
-</svg>
-<div class='review-item__textbox'>
-<h4 class='title title--h5'>Gias Uddin</h4>
-<small>Journalist, Editor </small>
-<p class='review-item__caption'>I would like to say &#39;Thank You!&#39; to Imam Uddin, imamuddinwp. He has the part and parcel of my dream &#39; <b><a href='https://www.bbcnuk.com/' target='_blank'>BBCNUK</a></b>&#39;, A UK based bangla news portal.</p>
-</div>
-</div>
-</div>
-<div class='swiper-pagination swiper-pagination-clickable swiper-pagination-bullets'><span aria-label='Go to slide 1' class='swiper-pagination-bullet swiper-pagination-bullet-active' role='button' tabindex='0'/><span aria-label='Go to slide 2' class='swiper-pagination-bullet' role='button' tabindex='0'/><span aria-label='Go to slide 3' class='swiper-pagination-bullet' role='button' tabindex='0'/></div>
-<span aria-atomic='true' aria-live='assertive' class='swiper-notification'/></div>
-</div>
+  <hr/>
+<!-- Clients -->
 <div class='mt-4'>
-<h2 class='title title--h3'>Happy Clients</h2>
-<p>Here you will some logo of my happy client&#39;s. Actually these are my freelancing project. I have completed these projects as an SEO Expert &amp; Web Designer.</p>
-<div class='swiper-container js-carousel-clients swiper-container-initialized swiper-container-horizontal' style='cursor: grab;'>
-<div class='swiper-wrapper' style='transform: translate3d(0px, 0px, 0px);'>
-<div class='swiper-slide swiper-slide-active' style='width: 130px; margin-right: 30px;'><a href='https://www.bbcnuk.com/p/about-us.html'><img alt='bangla-barta-bbcnuk-logo' height='100%' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1uISYYt_AcrFu8pH4w8c-j6NoIP8tS69oNxf0aTA9PW0a9VkomO3HCNziLTxiVq_iRgjz_Fp2brZ-nWLjM_oQmjCmjmO-ne0RbHSj4ia-5WYWJ8LMwNWf_zDxfeCB2Hju4TVRjPL4CyTb1f3eYODx16Xwf63oq5E4LLI_JcbDZksouKABSbimjXVukw/s1600-rw/bangla-barta-bbcnuk-logo.webp' width='100%'/></a></div>
-<div class='swiper-slide swiper-slide-next' style='width: 130px; margin-right: 30px;'><a href='https://freelancing-geek.blogspot.com/'><img alt='freelancing-geek-logo' border='0' data-original-height='90' data-original-width='452' height='100%' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi29DZ8ssm5RH9X01tfSV4yBUVr-2pR6d4rhCTHuBgaDiL158-9i3PyvoUIoynjtzGaZKt6eOllLr75liByRulxcKyGIyL2eEXmA1JcODUZhw7kaSPIL2GdJl53wWUekVn6KSbjlaGBpTd5H1I4IHqJ8JF7k68ja194ha-iLI7cxPVQc-fQqSjPvuKipw/s1600-rw/freelancing-geek-logo.webp' width='100%'/></a></div>
-<div class='swiper-slide' style='width: 130px; margin-right: 30px;'><a href='https://www.ebanglaweb.com/'><img alt='e-bangla-web-logo' border='0' data-original-height='90' data-original-width='452' height='100%' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggSxXg38qQocPcDSzB5ipxdb5sSYzDLq0w5fKktGUz_glJt3zoncjTeA2S3HioNMhoB5HnBYEZ2jx3jL1aF4tT7sOazsjLVfAWC9PAVUiGCqug9hnQuUwy8LvDtUGQIc3vzY0IYGwd4vS6Ch3JzFZm7ACmm0zzN296t2AwSA_Pc0oCd3CH7j4II5udYQ/s1600-rw/e-bangla-web-logo.webp' width='100%'/></a></div>
-<div class='swiper-slide' style='width: 130px; margin-right: 30px;'><a href='https://www.alhamdulillahtech.com/'><img alt='alhamdulillah-tech' height='100%' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2awQqZiQmPlE0rteLqPRjg-AK2TqAZ396iKibgwWW83irIelGrS9J3f_eR7L4BGAoommWenwJbNyouN0v9OPiqa3fKGscO6odzVvCZNVVbIVwpPvT-faiYJqJCR9XYU1h4f2N0MTOYIjB_k5gUX_7IrMRXSfgBaWvwSJLO_SJAZ9EeHsopYfVYj-6JQ/s1600-rw/alhamdulillah-tech.web' width='100%'/></a></div>
-<div class='swiper-slide' style='width: 130px; margin-right: 30px;'><a href='https://imamuddinwp.com/'><img alt='imam-uddin-imamcu07-imamuddinwp' height='100%' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1_5Oy_TzJ4VNuv0zvknqaStJltLVZuDimBf9HxTsokdZfVpiUPKPgceEB-LYBTx3HfnGQD1GHmCzebz309zG98ODyBiozAPU5TL9IUBHbztEHbHu_kPyV7CBqQnoHD9xLNDdaJLJ_0vimdF7vBv4ybwoAV_4R3J81nEBcuoIO2b7OLjFvrHT89hPNvA/s1600-rw/imam-uddin-imamcu07-imamuddinwp.webp' width='100%'/></a></div>
-<div class='swiper-slide' style='width: 130px; margin-right: 30px;'><a href='https://nextgendigitalbd.blogspot.com/'><img alt='nextgen-digital-imamuddinwp' border='0' data-original-height='90' data-original-width='452' height='100%' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgM64AmUsZuPaFjT7srZzuzRYEDV8YSFRHaN7H2n9Ec-d0R5B_0dFUEtCL-4Du1PTGDYLPTEK2ccAPTIfWfnlTmlC4OT1L3CD9LI4QwAder6IqiYWDsDv_grUd3Zfx9vhPD9Zq4JUgAn4VDUh4KDefJtuUyNOmqe43Nm2V-WQOqAJAJF_6QENW1K0INw/s1600-rw/nextgen-digital-imamuddinwp.webp' width='100%'/></a></div>
-<div class='swiper-slide' style='width: 130px; margin-right: 30px;'><a href='https://istighfarblog.blogspot.com/'><img alt='istighfar-blog-logo' border='0' data-original-height='90' data-original-width='452' height='100%' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhP0esuvgvXTPLtjeMLbZAqbugDpDui4MNiSSXQ5GWmQIf3cK3Q3BcsaxstxwSJihX_7MV0fF5J1kdN9pKvdaQuHen3YCs4MgXYigIA60IqF2pcvmpoaEw0arEEuiFY-pA_h_AD6TnHdNN7uLYjh8LAMmcILFrJ8hp2p3pQZxbNm9ax4irtQWdyIva5VA/s1600-rw/istighfar-blog-logo.webp' width='100%'/></a></div>
+<h3 class='title title--h3 title__separate'>Creative Brands I&#39;ve Created!</h3>
+<p>Explore a showcase of innovative and impactful brands that I&#8217;ve passionately built from the ground up. Each brand reflects creativity, strategy, and a deep understanding of design, digital trends, and audience connection. Dive into my portfolio and discover the stories behind these powerful brand identities that stand out and deliver results.</p>
+<div class='swiper-container js-carousel-clients'>
+  <div class='swiper-wrapper'>
+    <!-- Item client -->
+    <div class='swiper-slide'>
+      <a href='https://techbanglainfo.com/' target='_blank'>
+        <img alt='Tech-Bangla-Info-imamuddinwp' height='100%' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-pqaC1l05-uBGFRcE-7hluAst9pJbFqtvLVByk89Fgc8TbmYv8WDDaz8417rDZFjun6w27M6PuRoWFrLtUWfPWdBAOEjFUZAMHU_zg_X6_i2xLhcXC63mItPercH6PI8PPH3KoqqSPoC-Uc1ONEyy87U2J6bXyoC_m3AuVV_3aDNlQ3cCg-_EHjFDP68/s150-rw/tech-bangla-info.webp' width='100%'/>
+      </a>
+    </div>
+    <!-- Item client -->
+    <div class='swiper-slide'>
+      <a href='https://freelancing-geek.blogspot.com/' target='_blank'>
+        <img alt='Freelancing-Geek-imamuddinwp' height='100%' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3rib8vq30rhIRkAaT9mTADpvbqPmGsI5fV3G0vaLJpHDqLU5RTjTYYyy5fYJHuHbWvkErdQnnHqOCdJFQbFoJK1ix-JGkggQnuir_QbWqURxDRp0ar2y3sR-HfhlAU5HXMq9C9AL5kmJMiKHUA6r7wnDfdvxve8RW52YkZL1M2qFZ0ZwNK2GK3CexCKSg/s150-rw/freelancing-geek-logo.webp' width='100%'/>
+      </a>
+    </div>
+    <!-- Item client -->
+    <div class='swiper-slide'>
+      <a href='https://nextgendigitalhub.blogspot.com/' target='_blank'>
+        <img alt='NextGen-Digital-imamuddinwp' height='100%' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKsxgyVmwHFTQYfQ5wOXhQZlxuubX3QGGUntYxDDxMk4iuwX_UlP6900Q8_QsAPrluMTJ78gX9fOSbxPpBb1vzdn_r0xJWNqBzUWafMSgMuD6NtWcvhCcXetL5HWMZFa7ZGHmN74HnWfvR3dQFwCA669S8_81HE-wJgFxbuzhKqMMg5nRmcRiugxzrONg/s150-rw/nextgen-digital-logo.webp' width='100%'/>
+      </a>
+    </div>
+    <!-- Item client -->
+    <div class='swiper-slide'>
+      <a href='/' target='_blank'>
+        <img alt='E-Bangla-Web-imamuddinwp' height='100%' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggSxXg38qQocPcDSzB5ipxdb5sSYzDLq0w5fKktGUz_glJt3zoncjTeA2S3HioNMhoB5HnBYEZ2jx3jL1aF4tT7sOazsjLVfAWC9PAVUiGCqug9hnQuUwy8LvDtUGQIc3vzY0IYGwd4vS6Ch3JzFZm7ACmm0zzN296t2AwSA_Pc0oCd3CH7j4II5udYQ/s150-rw/e-bangla-web-logo.webp' width='100%'/>
+      </a>
+    </div>
+    <!-- Item client -->
+    <div class='swiper-slide'>
+      <a href='/' target='_blank'>
+        <img alt='Imam-Uddin-imamuddinwp' height='100%' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1_5Oy_TzJ4VNuv0zvknqaStJltLVZuDimBf9HxTsokdZfVpiUPKPgceEB-LYBTx3HfnGQD1GHmCzebz309zG98ODyBiozAPU5TL9IUBHbztEHbHu_kPyV7CBqQnoHD9xLNDdaJLJ_0vimdF7vBv4ybwoAV_4R3J81nEBcuoIO2b7OLjFvrHT89hPNvA/s150-rw/imam-uddin-imamcu07-imamuddinwp.webp' width='100%'/>
+      </a>
+    </div>
+    <!-- Item client -->
+    <div class='swiper-slide'>
+      <a href='https://www.bbcnuk.com/p/about-us.html' target='_blank'>
+        <img alt='bangla-barta-bbcnuk-logo' height='100%' loading='lazy' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1uISYYt_AcrFu8pH4w8c-j6NoIP8tS69oNxf0aTA9PW0a9VkomO3HCNziLTxiVq_iRgjz_Fp2brZ-nWLjM_oQmjCmjmO-ne0RbHSj4ia-5WYWJ8LMwNWf_zDxfeCB2Hju4TVRjPL4CyTb1f3eYODx16Xwf63oq5E4LLI_JcbDZksouKABSbimjXVukw/s150-rw/bangla-barta-bbcnuk-logo.webp' width='100%'/>
+      </a>
+    </div>
+  </div>
+  <div class='swiper-pagination'/>
 </div>
-<div class='swiper-pagination swiper-pagination-clickable swiper-pagination-bullets'><span aria-label='Go to slide 1' class='swiper-pagination-bullet swiper-pagination-bullet-active' role='button' tabindex='0'/><span aria-label='Go to slide 2' class='swiper-pagination-bullet' role='button' tabindex='0'/><span aria-label='Go to slide 3' class='swiper-pagination-bullet' role='button' tabindex='0'/><span aria-label='Go to slide 4' class='swiper-pagination-bullet' role='button' tabindex='0'/><span aria-label='Go to slide 5' class='swiper-pagination-bullet' role='button' tabindex='0'/></div>
-<span aria-atomic='true' aria-live='assertive' class='swiper-notification'/></div>
 </div>
-     </div>
+<p>I&#8217;m always open to new opportunities and collaborations. If you&#39;re interested in elevating your online presence or have any questions, feel free to reach out to me!</p>
+  <hr/></div>
+  
 </b:if>
 		<b:section class='box box-content' cond='!data:view.isHomepage' id='main'>
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
@@ -2069,7 +2194,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
     <b:widget-setting name='showDateHeader'>false</b:widget-setting>
     <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
     <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
-    <b:widget-setting name='showShareButtons'>false</b:widget-setting>
+    <b:widget-setting name='showShareButtons'>true</b:widget-setting>
     <b:widget-setting name='authorLabel'>by</b:widget-setting>
     <b:widget-setting name='showCommentLink'>true</b:widget-setting>
     <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
@@ -2092,7 +2217,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
     <b:widget-setting name='showReactions'>false</b:widget-setting>
   </b:widget-settings>
   <b:includable id='main' var='this'>
-            <b:if cond='data:view.isMultipleItems'><div class='pb-2'><h1 class='title title--h1 first-title title__separate'>Blog</h1></div></b:if>
+            <b:if cond='data:view.isMultipleItems'><div class='pb-2'><h2 class='title title--h2 first-title title__separate'>Blog</h2></div></b:if>
             <div class='news-grid'>
                 <b:class cond='data:view.isError' name='bt-items'/>
 				<b:if cond='data:view.isError'>
@@ -2138,123 +2263,6 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
     <b:include name='platformShare'/>
   </b:with>
 </b:includable>
-  <b:includable id='breadcrumb'>
-<div class='info-header'>
-    <b:class cond='data:view.isPost' name='item-post'/>
-    <b:class cond='data:view.isPage' name='item-page'/>
-    <div class='row'>
-        <div class='container'>
-            <b:if cond='data:blog.url == data:blog.homepageUrl + &quot;search&quot;'>
-                <nav class='search-breadcrumbs' id='breadcrumb'>
-                    <a expr:href='data:blog.homepageUrl'>Home</a>
-                    <em class='delimiter'/>
-                    <a class='current' expr:href='data:blog.homepageUrl + &quot;search&quot;'>Template Mới Nhất</a>
-                </nav>
-                <h1 class='item-name entry-title'><data:blog.pageName/> Blogger Templates 2020</h1>
-                <b:elseif cond='data:view.search.label AND data:numPosts &gt; 0'/>
-                <nav class='search-breadcrumbs' id='breadcrumb'>
-                    <a expr:href='data:blog.homepageUrl'>Home</a>
-                    <em class='delimiter'/>
-                    <a class='current' expr:href='data:blog.homepageUrl + &quot;search/label/&quot; + data:view.search.label'><data:view.search.label/></a>
-                </nav>
-		<b:if cond='data:view.search.label == &quot;blog&quot;'>
-			<h1>Thủ thuật kinh nghiệm blogspot hay nhất</h1>
-			<p>Tổng hợp những bài viết thủ thuật blogspot, kinh nghiệm tối ưu blogger, chia sẻ code tiện ích blogger, thủ thuật kinh nghiệm blogspot hay nhất 2020.</p>
-          <b:elseif cond='data:view.search.label == &quot;Ecommerce&quot; or data:view.search.label == &quot;template-ban-hang&quot;'/>
-			<h1>Template blogspot bán hàng</h1>
-			<p>Tổng hợp giao diện blog bán hàng chuyên nghiệp, đẹp và chuẩn seo nhất 2020. Giao diện blog bán hàng thời trang, mỹ phẩm, nội thất, đồ công nghệ, ... </p>
-          <b:elseif cond='data:view.search.label == &quot;House&quot; or data:view.search.label == &quot;template-bat-dong-san&quot;'/>
-			<h1>Template blogspot bất động sản</h1>
-			<p>Tổng hợp các mẫu giao diện blogspot bất động sản dịch vụ nhà đất đẹp chuẩn seo nhất 2020.</p>
-          <b:elseif cond='data:view.search.label == &quot;Business&quot; or data:view.search.label == &quot;template-cong-ty&quot;'/>
-			<h1>Template blogspot công ty</h1>
-			<p>Tổng hợp các mẫu giao diện blogspot dành cho công ty, doanh nghiệp, dịch vụ đẹp chuẩn seo nhất 2020.</p>
-          <b:elseif cond='data:view.search.label == &quot;Blog-Magazine&quot; or data:view.search.label == &quot;template-tap-chi&quot;'/>
-			<h1>Template blogspot tin tức báo chí</h1>
-			<p>Tổng hợp các mẫu giao diện blogspot đẹp chuẩn seo nhất, tối ưu seo, tốc độ tải trang và các vị trí quảng cáo, dễ dàng đăng ký adsense và làm các trang báo tin tức.</p>
-          <b:elseif cond='data:view.search.label == &quot;Album&quot; or data:view.search.label == &quot;template-album&quot;'/>
-			<h1>Template blogspot ảnh &amp; video</h1>
-			<p>Tổng hợp các mẫu giao diện blogspot về ảnh và video đẹp nhất 2020. Template blogspot ảnh cưới, ảnh kỉ yếu, dịch vụ chụp hình, wedding studio, template chia sẻ phim và tài liệu.</p>
-          <b:elseif cond='data:view.search.label == &quot;Free&quot; or data:view.search.label == &quot;0&quot;'/>
-			<h1>Template blogspot miễn phí</h1>
-			<p>Chia sẻ tất cả các mẫu giao diện blogspot miễn phí đẹp nhất 2020. Các template Premium hoàn toàn miễn phí.</p>
-          <b:elseif cond='data:view.search.label == &quot;Landing&quot; or data:view.search.label == &quot;template-landing&quot;'/>
-			<h1>Template blogspot landing page</h1>
-			<p>Tổng hợp các mẫu giao diện blogspot landing page bán hàng, landing page giới thiệu dịch vụ, landing page giới thiệu sản phẩm, landing page giới thiệu khóa học ...</p>
-          <b:elseif cond='data:view.search.label == &quot;Premium&quot;'/>
-			<h1>Template blogspot cao cấp</h1>
-			<p>Tổng hợp các mẫu giao diện blogspot cao cấp và đẹp nhất 2020. Các template được tối ưu SEO và tốc độ tải trang, bố cục đẹp mắt, đầy tính thẩm mỹ.</p>
-          <b:elseif cond='data:view.search.label == &quot;blogger-templates&quot;'/>
-			<h1>Kho giao diện blogspot</h1>
-			<p>Kho giao diện blogspot cao cấp và miễn phí đẹp nhất chuẩn seo nhất năm 2020.</p>
-          <b:elseif cond='data:view.search.label == &quot;Bestsellers&quot;'/>
-			<h1>Tổng hợp template bán chạy nhất 2020</h1>
-			<p>Kho giao diện blogspot cao cấp và miễn phí đẹp nhất chuẩn seo nhất năm 2020.</p>
-  		  <b:else/>
-  			<h1><data:blog.pageName/> - <data:blog.title/></h1>
-			<p>Kho giao diện blogspot cao cấp và miễn phí đẹp nhất chuẩn seo nhất năm 2020.</p>
-		</b:if>
-                <b:comment><script type='application/ld+json'>
-                  {
-                  	&quot;@context&quot;: &quot;http://schema.org&quot;,
-                  	&quot;@type&quot;: &quot;BreadcrumbList&quot;,
-                  	&quot;itemListElement&quot;: [{
-                  		&quot;@type&quot;: &quot;ListItem&quot;,
-                  		&quot;position&quot;: 1,
-                  		&quot;name&quot;: &quot;<data:blog.title/>&quot;,
-                  		&quot;item&quot;: &quot;<data:blog.homepageUrl/>&quot;
-                  	},{
-                 		&quot;@type&quot;: &quot;ListItem&quot;,
-                  		&quot;position&quot;: 2,
-                  		&quot;name&quot;: &quot;<data:view.search.label/>&quot;,
-                  		&quot;item&quot;: &quot;<data:blog.url/>&quot;
-                  	}]
-                  }
-                  </script></b:comment>
-                <b:elseif cond='data:view.search.query AND data:numPosts &gt; 0'/>
-                <nav class='search-breadcrumbs' id='breadcrumb'>Tìm kiếm từ khóa: <data:view.search.query/></nav>
-                <h1>Hiển thị tất cả kết quả tìm kiếm theo từ khóa &quot;<data:view.search.query/>&quot;</h1>
-                <b:elseif cond='data:view.isSearch AND data:numPosts == 0'/>
-                <div class='trending-items'>
-                    <nav class='search-breadcrumb' id='breadcrumb'>Không có kết quả tìm kiếm từ khóa &quot;
-                        <b:if cond='data:view.search.query'><data:view.search.query/><b:else/><data:view.search.label/></b:if>&quot;</nav>
-                    <h1 class='info-title'>Xem thêm các template bán chạy nhất 2020</h1>
-                </div>
-                <b:elseif cond='!data:view.isHomepage and !data:view.isError'/>
-                <nav id='breadcrumb'>
-                    <a expr:href='data:blog.homepageUrl'><data:messages.home/></a>
-                    <em class='delimiter'/>
-                    <b:if cond='data:view.isPage'>Pages <em class='delimiter'/> <data:blog.pageName/>
-					<b:else/>
-<b:if cond='data:view.isPost'>
-<b:loop values='data:posts where (p =&gt; p.labels any (l =&gt; l.name != &quot;blog&quot;))' var='post'>
- 						 <a href='/search/label/blogger-templates?max-results=9'>Blogger Templates</a>
-                  </b:loop>
-<b:loop values='data:posts where (p =&gt; p.labels any (l =&gt; l.name == &quot;blog&quot;))' var='post'>
-  						<a href='/search/label/blog?max-results=9'>Blog</a>
-                  </b:loop>
- </b:if>
-</b:if>
-                </nav>
-                <b:if cond='data:view.search and !data:view.search.label and !data:view.search.query and !data:view.isArchive'>
-                    <h1 class='item-name entry-title'>Giao Diện Blogger Miễn Phí và Cao Cấp 2020</h1>
-                    <b:else/>
-                    <h1 class='item-name entry-title'><data:blog.pageName/></h1>
-                </b:if>
-                <b:elseif cond='data:view.isError'/>
-                <nav class='search-breadcrumbs' id='breadcrumb'><b>Error 404:</b> Không tìm thấy trang :(</nav>
-                <h1 class='item-name entry-title'>Xem thêm các template bán chạy nhất 2020</h1>
-                <!--<div class='errorWrap'>
-                  <h3>404 <span>:(</span></h3>
-                  <h4>There&#39;s nothing here!</h4>
-                  <p>Sorry, the page you were looking for in this site does not exist.</p>
-                  <a class='homepage' expr:href='data:blog.homepageUrl'>Go to Home Page</a>
-                </div>-->
-            </b:if>
-        </div>
-    </div>
-</div>
-            </b:includable>
   <b:includable id='breadcrumbJson'>
         <script type='application/ld+json'>
               {
@@ -2278,7 +2286,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
               	}]
               }
               </script>
-        <script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;NewsArticle&quot;,&quot;mainEntityOfPage&quot;:{&quot;@type&quot;:&quot;WebPage&quot;,&quot;@id&quot;:&quot;<data:post.url.canonical.jsonEscaped/>&quot;},&quot;headline&quot;:&quot;<data:post.title.jsonEscaped/>&quot;,&quot;description&quot;:&quot;<data:post.snippets.short.jsonEscaped/>&quot;,&quot;image&quot;:[&quot;<data:post.featuredImage.jsonEscaped/>&quot;],&quot;datePublished&quot;:&quot;<data:post.date.iso8601.jsonEscaped/>&quot;,&quot;dateModified&quot;:&quot;<data:post.lastUpdated.iso8601.jsonEscaped/>&quot;,&quot;author&quot;:{&quot;@type&quot;:&quot;Person&quot;,&quot;name&quot;:&quot;<data:post.author.name.jsonEscaped/>&quot;},&quot;publisher&quot;:{&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Giaodienblog&quot;,&quot;logo&quot;:{&quot;@type&quot;:&quot;ImageObject&quot;,&quot;url&quot;:&quot;https://2.bp.blogspot.com/-G2XWC4WvbUQ/XroKSsgEfPI/AAAAAAAACTE/I7CwOqF69XQscmwKi2xxdLFaftaYHQs3QCLcBGAsYHQ/s300/logo-blog.png&quot;,&quot;width&quot;:116,&quot;height&quot;:116}}}</script>
+        <script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;NewsArticle&quot;,&quot;mainEntityOfPage&quot;:{&quot;@type&quot;:&quot;WebPage&quot;,&quot;@id&quot;:&quot;<data:post.url.canonical.jsonEscaped/>&quot;},&quot;headline&quot;:&quot;<data:post.title.jsonEscaped/>&quot;,&quot;description&quot;:&quot;<data:post.snippets.short.jsonEscaped/>&quot;,&quot;image&quot;:[&quot;<data:post.featuredImage.jsonEscaped/>&quot;],&quot;datePublished&quot;:&quot;<data:post.date.iso8601.jsonEscaped/>&quot;,&quot;dateModified&quot;:&quot;<data:post.lastUpdated.iso8601.jsonEscaped/>&quot;,&quot;author&quot;:{&quot;@type&quot;:&quot;Person&quot;,&quot;name&quot;:&quot;<data:post.author.name.jsonEscaped/>&quot;},&quot;publisher&quot;:{&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Giaodienblog&quot;,&quot;logo&quot;:{&quot;@type&quot;:&quot;ImageObject&quot;,&quot;url&quot;:&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhporgMA_IzImftGb0lY__BWOJcZZYkKdOj7hcw_2iSV0rdr_yilpsHVcvl2Jb7LP0ojB8EcfA4cMFNBBRYbjihjkQ_07mbabdF6-oE07fmZ0i_ZUSE0s218AZcevT-oPI2L2yC8sVQDE8J_Z7oGx_07YR1jAyI91ASDrw9bklfVnSa-nyz8S3mXZe4CB_G/w1280-h720-p-k-no-nu/imamuddinwp-imamuddin-imam-uddin.webp&quot;,&quot;width&quot;:116,&quot;height&quot;:116}}}</script>
 <b:if cond='data:view.isPost'>
   <script type='application/ld+json'> {
     &quot;@context&quot;: &quot;http://schema.org&quot;,
@@ -2304,7 +2312,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
        &quot;name&quot;: &quot;Giaodienblog&quot;,
        &quot;logo&quot;: {
          &quot;@type&quot;: &quot;ImageObject&quot;,
-         &quot;url&quot;: &quot;https://2.bp.blogspot.com/-G2XWC4WvbUQ/XroKSsgEfPI/AAAAAAAACTE/I7CwOqF69XQscmwKi2xxdLFaftaYHQs3QCLcBGAsYHQ/s300/logo-blog.png&quot;,
+         &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhporgMA_IzImftGb0lY__BWOJcZZYkKdOj7hcw_2iSV0rdr_yilpsHVcvl2Jb7LP0ojB8EcfA4cMFNBBRYbjihjkQ_07mbabdF6-oE07fmZ0i_ZUSE0s218AZcevT-oPI2L2yC8sVQDE8J_Z7oGx_07YR1jAyI91ASDrw9bklfVnSa-nyz8S3mXZe4CB_G/w1280-h720-p-k-no-nu/imamuddinwp-imamuddin-imam-uddin.webp&quot;,
          &quot;width&quot;: 116,
          &quot;height&quot;: 116
        }
@@ -2714,7 +2722,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
               <b:comment><b:include name='postMeta'/></b:comment>
               	<b:if cond='data:view.isMultipleItems'>
                   <article class='news-item box' expr:data-i='data:i' expr:data-template-id='data:post.id'>
-        <script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;NewsArticle&quot;,&quot;mainEntityOfPage&quot;:{&quot;@type&quot;:&quot;WebPage&quot;,&quot;@id&quot;:&quot;<data:post.url.canonical.jsonEscaped/>&quot;},&quot;headline&quot;:&quot;<data:post.title.jsonEscaped/>&quot;,&quot;description&quot;:&quot;<data:post.snippets.short.jsonEscaped/>&quot;,&quot;image&quot;:[&quot;<data:post.featuredImage.jsonEscaped/>&quot;],&quot;datePublished&quot;:&quot;<data:post.date.iso8601.jsonEscaped/>&quot;,&quot;dateModified&quot;:&quot;<data:post.lastUpdated.iso8601.jsonEscaped/>&quot;,&quot;author&quot;:{&quot;@type&quot;:&quot;Person&quot;,&quot;name&quot;:&quot;<data:post.author.name.jsonEscaped/>&quot;},&quot;publisher&quot;:{&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Blogger&quot;,&quot;logo&quot;:{&quot;@type&quot;:&quot;ImageObject&quot;,&quot;url&quot;:&quot;https://2.bp.blogspot.com/-G2XWC4WvbUQ/XroKSsgEfPI/AAAAAAAACTE/I7CwOqF69XQscmwKi2xxdLFaftaYHQs3QCLcBGAsYHQ/s300/logo-blog.png&quot;,&quot;width&quot;:116,&quot;height&quot;:116}}}</script>
+        <script type='application/ld+json'>{&quot;@context&quot;:&quot;https://schema.org&quot;,&quot;@type&quot;:&quot;NewsArticle&quot;,&quot;mainEntityOfPage&quot;:{&quot;@type&quot;:&quot;WebPage&quot;,&quot;@id&quot;:&quot;<data:post.url.canonical.jsonEscaped/>&quot;},&quot;headline&quot;:&quot;<data:post.title.jsonEscaped/>&quot;,&quot;description&quot;:&quot;<data:post.snippets.short.jsonEscaped/>&quot;,&quot;image&quot;:[&quot;<data:post.featuredImage.jsonEscaped/>&quot;],&quot;datePublished&quot;:&quot;<data:post.date.iso8601.jsonEscaped/>&quot;,&quot;dateModified&quot;:&quot;<data:post.lastUpdated.iso8601.jsonEscaped/>&quot;,&quot;author&quot;:{&quot;@type&quot;:&quot;Person&quot;,&quot;name&quot;:&quot;<data:post.author.name.jsonEscaped/>&quot;},&quot;publisher&quot;:{&quot;@type&quot;:&quot;Organization&quot;,&quot;name&quot;:&quot;Blogger&quot;,&quot;logo&quot;:{&quot;@type&quot;:&quot;ImageObject&quot;,&quot;url&quot;:&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhporgMA_IzImftGb0lY__BWOJcZZYkKdOj7hcw_2iSV0rdr_yilpsHVcvl2Jb7LP0ojB8EcfA4cMFNBBRYbjihjkQ_07mbabdF6-oE07fmZ0i_ZUSE0s218AZcevT-oPI2L2yC8sVQDE8J_Z7oGx_07YR1jAyI91ASDrw9bklfVnSa-nyz8S3mXZe4CB_G/w1280-h720-p-k-no-nu/imamuddinwp-imamuddin-imam-uddin.webp&quot;,&quot;width&quot;:116,&quot;height&quot;:116}}}</script>
         <b:class cond='data:view.isMultipleItems' expr:name='&quot;template-&quot; + data:i'/>
                     <div class='news-item__image-wrap overlay overlay--45'>
                       <div class='news-item__date'><b:eval expr='data:post.date format &quot;dd&quot;'/><span><b:eval expr='data:post.date format &quot;MMM&quot;'/></span></div>
@@ -2755,7 +2763,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
               <div class='blog-pager' id='blog-pager'>
                 <b:if cond='data:olderPageUrl'>
   					<b:if cond='data:numPosts gte 9'>
-                  <a class='blog-pager-older-link load-more' expr:data-load='data:olderPageUrl' id='load-more-link'>Tải thêm</a>
+                  <a class='blog-pager-older-link load-more' expr:data-load='data:olderPageUrl' id='load-more-link'>Download more</a>
                       <b:else/>
 				  <!--<span class='no-more load-more show'>No More Templates</span>-->
                   </b:if>
@@ -2869,7 +2877,7 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
         <script type='application/ld+json'>{&quot;@context&quot;:&quot;http://schema.org&quot;,&quot;@type&quot;:&quot;BreadcrumbList&quot;,&quot;itemListElement&quot;:[{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:1,&quot;name&quot;:&quot;<data:messages.home/>&quot;,&quot;item&quot;:&quot;<data:blog.homepageUrl.canonical/>&quot;},{&quot;@type&quot;:&quot;ListItem&quot;,&quot;position&quot;:2,&quot;name&quot;:&quot;<data:post.title/>&quot;,&quot;item&quot;:&quot;<data:post.url.canonical/>&quot;}]}</script>
                 <div class='item-content'>
                   <div class='item-description page entry-content'>
-                    <h2 class='page-title'><data:post.title/></h2>
+                    <h1 class='page-title'><data:post.title/></h1>
                     <div class='post-body'><data:post.body/></div>
                   </div>
                 </div>
@@ -2906,13 +2914,13 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
             <data:post.noNewCommentsText/>
           </b:if>
 		  <div class='comment-top'>
-    		<div class='cmt-counts'><data:post.numberOfComments/> Bình luận</div>
+    		<div class='cmt-counts'><data:post.numberOfComments/> Comment</div>
     		<div class='sort-comment'>
-        		<span class='sort-title'>Sắp xếp theo</span>
+        		<span class='sort-title'>Sort by</span>
         			<div class='sort-sel'>
            				<select class='sort-option'>
-              				<option selected='selected' value='newest'>Mới nhất</option>
-              				<option value='oldest'>Cũ nhất</option>
+              				<option selected='selected' value='newest'>Latest</option>
+              				<option value='oldest'>Oldest</option>
            				</select>
         			</div>
     		</div>
@@ -2932,8 +2940,44 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
       </section>
 </b:if>
 </b:includable>
+  <b:includable id='tooltipCss'>
+  <!-- LINT.IfChange -->
+  <style>
+    .post-body a.b-tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .post-body a.b-tooltip-container .b-tooltip {
+      display: block !important;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-20%, 1px);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .post-body a.b-tooltip-container .b-tooltip iframe {
+      width: 200px;
+      height: 198px;
+      max-width: none;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .post-body a.b-tooltip-container:hover .b-tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+  <!-- LINT.ThenChange(//depot/google3/java/com/google/blogger/b2/layouts/widgets/v2-style.css) -->
+</b:includable>
 </b:widget>
-<b:widget cond='data:blog.url == data:blog.homepageUrl path &quot;p/contact.html&quot;' id='ContactForm1' locked='false' title='Biểu mẫu liên hệ' type='ContactForm' version='2' visible='true'>
+<b:widget cond='data:blog.url == data:blog.homepageUrl path &quot;p/contact.html&quot;' id='ContactForm1' locked='false' title='Contact Form' type='ContactForm' version='2' visible='true'>
   <b:includable id='main'>
   <b:include name='content'/>
 </b:includable>
@@ -2966,10 +3010,9 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
 		                </form>
 </b:includable>
 </b:widget>
-</b:section>
-					
+</b:section>					
 					<!-- Footer -->
-                  <footer class='footer'>Technical Support - <a href='https://imamuddinwp.com' traget='_blank'>imamuddinwp</a></footer>
+                  <footer class='footer'>&#169; 2020 - <span id='creditsYear'/><script type='text/javascript'>const yearElement=document.getElementById(&#39;creditsYear&#39;);if(yearElement){yearElement.textContent=new Date().getFullYear()}</script> &#169; <a href='/'>imamuddinwp</a> - Technical Support <a href='https://nextgendigitalhub.blogspot.com/search' target='_blank' title='NextGen Digital Hub'>NextGen Digital Hub</a>.</footer>
 		        </div>
 			</div>
 		</div>	
@@ -2983,28 +3026,25 @@ window.addEventListener("load",function(){var e=!1;$(document).on("scroll",funct
         <clipPath id='avatar-hexagon'>
              <path d='M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z'/>
         </clipPath>		
-    </svg>
-	
-    <div class='back-to-top'/>
-    
+    </svg>	
+    <div class='back-to-top'/>    
 	<!-- Demo Menu -->
 	<div class='btnSlideNav slideOpen'/>
     <div class='btnSlideNav slideClose'/>
 	<div class='slideNav'>
 		<ul class='list-unstyled'>
-			<li class='slideNav__item rtl-mode'><h4 class='title title--5'>More pages</h4> <a href='rtl/about.html'>RTL</a></li>
-			<li class='slideNav__item'><a href='one-page.html'>One page</a></li>
-			<li class='slideNav__item'><a href='background-2.html'>Background triangles</a></li>
-			<li class='slideNav__item'><a href='works_v2.html'>Works v2</a></li>
+			<li class='slideNav__item rtl-mode'><h4 class='title title--4'>Explore Me!</h4> <a aria-label='explore' href='/'><i class='icon-home'/></a></li>
+			<li class='slideNav__item'><a href='/p/about-me.html'>[Who Am I?]</a></li>
+			<li class='slideNav__item'><a href='/p/faqs.html'>[FAQs]</a></li>                            
+			<li class='slideNav__item'><a href='/p/sitemap.html'>[Sitemap]</a></li>                            
+			<li class='slideNav__item'><a href='/p/terms-of-services.html'>[ToS]</a></li>
+			<li class='slideNav__item'><a href='/p/cookie-policy.html'>[Cookie Policy]</a></li>
+			<li class='slideNav__item'><a href='/p/privacy-policy.html'>[Privacy Policy]</a></li>          
+			<li class='slideNav__item'><a href='/p/disclaimer.html'>[Disclaimer]</a></li>
         </ul>
-		<a class='btn btn--dark' href='dark/about.html'>Dark Template</a>
+		<a class='btn btn--dark' href='/p/works.html'>Portfolio</a>
 	</div>	
 	<div class='overlay-slideNav'/>
-
-        
-
-
-
   <b:include name='main-js'/>
 
 </body>
